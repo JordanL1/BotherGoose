@@ -1,6 +1,5 @@
 from flask import Flask, request, url_for, render_template
 import db
-import sqlite3 as lite
 import sys
 
 app = Flask(__name__)

@@ -9,3 +9,5 @@ def db_add(num, email):
     add = [id, num, email, 4]
 
     cursor.execute("INSERT INTO numbers VALUES(?,?,?,?)", add)
+
+    print(cursor.fetchall())

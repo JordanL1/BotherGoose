@@ -6,6 +6,6 @@ def db_add(num, email):
     cursor = conn.cursor()
     id = cursor.lastrowid
 
-    add = [(id, num, email, 4)]
+    add = [id, num, email, 4]
 
     cursor.execute("INSERT INTO numbers VALUES(?,?,?,?)", add)

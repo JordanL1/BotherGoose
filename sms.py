@@ -12,5 +12,5 @@ class sms_out():
 		
     def send_sms(self, text, nums):
         for x in range(1, len(nums)):
-            message = self.client.messages.create(body=text, to=nums[x], from_= self.twilio_number); # Our Twilio number
+            message = self.client.messages.create(body=text, to=nums[x], from_= self.twilio_number); # Our Twilio numberss
 	

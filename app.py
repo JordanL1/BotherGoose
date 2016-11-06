@@ -22,6 +22,6 @@ def handle_post():
 
     sms_obj = sms.sms_out()
 
-    sms_obj.send_sms(text, num)
+    sms_obj.send_sms2(text, num)
 
     return render_template('confirmation.html')

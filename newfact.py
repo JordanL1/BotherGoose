@@ -5,12 +5,13 @@ import db
 import sys
 
 # Text should be the random row index taking the fact data to send (SELECT * FROM table ORDER BY RAND() LIMIT X)
-text = SELECT fact FROM facts ORDER BY RAND() LIMIT 1 
+text = SELECT * FROM facts ORDER BY RAND() LIMIT 1 
 # import the data from the Phone Number List (SELECT phone FROM numbers)
-num = SELECT id FROM number WHERE number = 'number'
+num = SELECT DISTINCT number FROM number
+#
 
-#Information about 
-
+# Credential Usage
 sms_out()
 
-sendSMS(self, text, num)
+# Sends info with numbers used and 
+send_sms(self, text, num)

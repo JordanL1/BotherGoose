@@ -18,6 +18,8 @@ def handle_post():
 
     db.db_add(num, email)
 
-    sms.sms_out(text, num)
+    sms_obj = sms.sms_out()
+
+    sms_obj.send_sms(text, num)
 
     return render_template('confirmation.html')

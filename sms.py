@@ -6,7 +6,6 @@ class sms_out():
                               twilio_tokens.auth_token)
 
     def send_sms(self, text, nums):
-        for x in xrange(len(nums)):
-            message = self.client.messages.create(body=text,
-                                                  to=nums[x],  # Replace with your phone number
+        message = self.client.messages.create(body=text,
+                                                  to=num,  # Replace with your phone number
                                                   from_="+441423740821")  # Our Twilio number

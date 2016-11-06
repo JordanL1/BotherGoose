@@ -12,3 +12,13 @@ def db_add(num, email):
     conn.commit()
 
     conn.close()
+
+
+"""def db_getnums()
+    conn = lite.connect('numbers.db')
+    cursor = conn.cursor()
+
+    cursor.execute("SELECT phone FROM numbers")
+
+    for row in cursor.conn:
+        nums = nums"""

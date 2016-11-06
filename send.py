@@ -22,7 +22,7 @@ class sender():
         scheduler = BackgroundScheduler()
         scheduler.start()
         scheduler.add_job(
-            func=self.send_facts(),
+            func=self.send_facts,
             trigger=IntervalTrigger(seconds=self.send_rate),
             id='SMS_Send_Job',
             name='Send facts every ' + str(self.send_rate) + ' seconds',

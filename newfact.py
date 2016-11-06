@@ -4,15 +4,13 @@ import sms
 import db
 import sys
 
-# import the data from the Phone Number List (SELECT phone FROM numbers)
-
 # Text should be the random row index taking the fact data to send (SELECT * FROM table ORDER BY RAND() LIMIT X)
 text = SELECT fact FROM facts ORDER BY RAND() LIMIT 1 
-
-
-app = Flask(__name__)
+# import the data from the Phone Number List (SELECT phone FROM numbers)
+num = SELECT id FROM number WHERE number = 'number'
 
 #Information about 
 
+sms_out()
 
 sendSMS(self, text, num)

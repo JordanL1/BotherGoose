@@ -13,6 +13,4 @@ class sms_out():
                                                   from_= self.twilio_number) # Our Twilio number
 												  
 	def send_sms2(self, text, nums):
-        message = self.client.messages.create(body=text,
-                                              to=nums,  # Replace with your phone number
-                                              from_= self.twilio_number) # Our Twilio number
+		message = self.client.messages.create(body=text, to=nums, from_= self.twilio_number) # Our Twilio number

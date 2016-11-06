@@ -1,5 +1,4 @@
 import sqlite3 as lite
-import sys
 
 def db_add(num, email):
     conn = lite.connect('numbers.db')

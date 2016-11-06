@@ -1,4 +1,3 @@
-import requests
 import time
 import atexit
 import db

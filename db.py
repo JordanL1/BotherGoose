@@ -14,11 +14,27 @@ def db_add(num, email):
     conn.close()
 
 
-"""def db_getnums()
+def db_getnums():
     conn = lite.connect('numbers.db')
     cursor = conn.cursor()
+    nums = []
 
     cursor.execute("SELECT phone FROM numbers")
 
-    for row in cursor.conn:
-        nums = nums"""
+    for row in cursor.execute("SELECT phone FROM numbers"):
+        nums.append(row[0])
+
+    conn.close()
+    return(nums)
+
+def db_getfacts():
+    conn = lite.connect('facts.db')
+    cursor = conn.cursor()
+
+    for row in cursor.execute("SELECT fact FROM facts ORDER BY RANDOM() LIMIT 1"):
+        text = row[0]
+
+    conn.close()
+
+    return text
+

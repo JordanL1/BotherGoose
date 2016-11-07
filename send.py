@@ -7,7 +7,7 @@ from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.interval import IntervalTrigger
 
 class sender():
-    send_rate = 10
+    send_rate = 3600
     last_send_time = time.time()
 
     def send_facts(self):

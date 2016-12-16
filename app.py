@@ -11,10 +11,12 @@ sender.main()
 
 @app.route('/', methods=['GET'])
 def home_page():
+    """Show home page when receiving get request to '/'."""
     return render_template('index.html')
 
 @app.route('/', methods=['POST'])
 def handle_post():
+    """Add contact details from form to database.  Send an automated SMS to the registered number."""
     num = request.form['phoneNumber']
     email = request.form['email']
 

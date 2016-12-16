@@ -7,10 +7,12 @@ from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.interval import IntervalTrigger
 
 class sender():
+    """Handle the sending of SMS at set intervals."""
     send_rate = 3600
     last_send_time = time.time()
 
     def send_facts(self):
+        """Send an SMS to a list of numbers from the database, containing a random fact from the database."""
         sms_out = sms.sms_out()
         nums = db.db_getnums()
         text = db.db_getfacts()
@@ -19,6 +21,7 @@ class sender():
 
 
     def start_send_loop(self):
+        """Schedule the task to send SMS at set intervals."""
         scheduler = BackgroundScheduler()
         scheduler.start()
         scheduler.add_job(

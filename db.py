@@ -12,6 +12,7 @@ def db_add(num, email):
     conn = lite.connect('numbers.db')
     cursor = conn.cursor()
 
+    # "Sent" field was intended to track no. of messages sent, but we never implemented this
     add = [num, email, 4]
 
     cursor.execute("INSERT INTO numbers (phone, email, sent) VALUES(?,?,?)", add)
